@@ -3,6 +3,10 @@ https://github.com/wbthomason/packer.nvim
 
 https://github.com/nvim-telescope/telescope.nvim
 https://github.com/nvim-telescope/telescope-file-browser.nvim/tree/master
+https://github.com/ahmedkhalf/project.nvim
 
 # Color schemes
 https://github.com/catppuccin/nvim
+
+# Nice to have
+alias nvim to nvim +"Telescope find_files"

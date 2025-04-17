@@ -16,7 +16,17 @@ return require('packer').startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
 
   use {
-    "nvim-telescope/telescope-file-browser.nvim",
-    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-}
+	  "nvim-telescope/telescope-file-browser.nvim",
+	  requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  }
+  use {
+	  "ahmedkhalf/project.nvim",
+	  config = function()
+		  require("project_nvim").setup {
+			  -- your configuration comes here
+			  -- or leave it empty to use the default settings
+			  -- refer to the configuration section below
+		  }
+	  end
+  }
 end)
