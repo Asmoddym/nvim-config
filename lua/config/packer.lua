@@ -2,7 +2,7 @@
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
-
+print("coucou")
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
@@ -25,4 +25,15 @@ return require('packer').startup(function(use)
 			'nvim-telescope/telescope.nvim',
 		},
 	}
+
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		{ run = ':TSUpdate' }
+	}
+
+	use { 'tpope/vim-fugitive' }
+
+	use { 'nvim-lua/plenary.nvim' }
+	use { 'ThePrimeagen/harpoon' }
+
 end)
