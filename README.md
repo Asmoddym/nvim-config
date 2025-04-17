@@ -4,6 +4,7 @@ https://github.com/wbthomason/packer.nvim
 https://github.com/nvim-telescope/telescope.nvim
 https://github.com/nvim-telescope/telescope-file-browser.nvim/tree/master
 https://github.com/nvim-telescope/telescope-project.nvim
+https://github.com/tpope/vim-fugitive
 
 # Color schemes
 https://github.com/catppuccin/nvim
