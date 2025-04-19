@@ -5,7 +5,9 @@ vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 vim.keymap.set("n", "<leader>T", "<C-w>v<C-w>w:terminal<CR>i")
 vim.keymap.set("n", "U", "<C-r>")
 
-
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- Custom commands
+
+vim.keymap.set("n", "<leader>gs", ":GitFloatingDiff<CR>")
