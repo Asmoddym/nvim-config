@@ -9,7 +9,3 @@ vim.keymap.set("n", "U", "<C-r>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-vim.api.nvim_create_user_command("SpecRunThisExample", function()
-	local path = vim.fn.expand("%") .. " " .. vim.fn.line(".")
-	vim.cmd("vertical terminal run-spec " .. path)
-end, {desc = "Run spec" })
