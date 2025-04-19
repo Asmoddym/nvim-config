@@ -10,4 +10,4 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Custom commands
 
-vim.keymap.set("n", "<leader>gs", ":GitFloatingDiff<CR>")
+vim.keymap.set("n", "<leader>gd", ":GitFloatingDiff<CR>")

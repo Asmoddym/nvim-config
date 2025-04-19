@@ -6,10 +6,12 @@ vim.api.nvim_create_user_command("SpecRunThisExample", function()
 	vim.cmd("vertical terminal " .. command .. " " .. path .. ":" .. line)
 end, {desc = "Spec: run this particular example" })
 
+-- TODO: Add an arg and set gd as diff of current file and gD as global diff
 vim.api.nvim_create_user_command("GitFloatingDiff", function()
 	ui = vim.api.nvim_list_uis()[1]
 	local width = math.floor(ui.width * 0.8)
 	local height = math.floor(ui.height * 0.8)
+	local path = vim.fn.expand("%")
 
 	buffer = vim.api.nvim_create_buf(true, true)
 	win = vim.api.nvim_open_win(buffer, true, {
@@ -21,7 +23,7 @@ vim.api.nvim_create_user_command("GitFloatingDiff", function()
 		border = 'rounded' ,
 		focusable= true
 	})
-	vim.fn.win_execute(win, ":Git ++curwin -p diff")
+	vim.fn.win_execute(win, ":Git ++curwin -p diff " .. path)
 end, {})
 
 
