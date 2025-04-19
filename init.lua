@@ -1,6 +1,6 @@
 require('config.remap')
 require('config.packer')
-require('lua.command.rails_spec')
+require('config.command')
 
 vim.o.splitright = true
 vim.o.splitbelow = true
