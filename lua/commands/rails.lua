@@ -5,9 +5,7 @@ vim.api.nvim_create_user_command("RailsSpecRunThisExample", function(args)
 	line = vim.fn.line(".")
 
 	if args["fargs"][1] == "-tmux" then
-		local win = utils.create_float(0.8, 0.8)
-
-		vim.fn.win_execute(win, ":terminal tmux attach -t tests")
+		local win = utils.create_float(0.8, 0.8, ":terminal tmux attach -t tests")
 
 		local cmd = "i" .. utils.termcode("<CR>") .. "run_spec \"" .. path .. "\", " .. line .. utils.termcode("<CR>") .. utils.termcode("<ESC>")
 		vim.api.nvim_feedkeys(cmd, 'm', false)

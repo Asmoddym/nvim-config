@@ -1,3 +1,5 @@
+utils = require('commands.utils')
+
 vim.api.nvim_create_user_command("GitFloatingDiff", function(args)
 	local path = nil
 
@@ -7,9 +9,7 @@ vim.api.nvim_create_user_command("GitFloatingDiff", function(args)
 		path = vim.fn.expand("%")
 	end
 
-	local win = create_float(0.7, 0.9)
-
-	vim.fn.win_execute(win, ":Git ++curwin -p diff " .. path)
+	local win = utils.create_float(0.7, 0.9, ":Git ++curwin -p diff " .. path)
 end, {nargs = "?" })
 
 
