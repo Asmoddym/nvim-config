@@ -1,6 +1,6 @@
 require('config.remap')
 require('config.packer')
-require('config.command')
+require('commands')
 
 vim.o.splitright = true
 vim.o.splitbelow = true
