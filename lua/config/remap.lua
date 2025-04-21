@@ -13,6 +13,4 @@ vim.keymap.set("n", "<C-u>", "{zz")
 vim.keymap.set("v", "<C-d>", "}zz")
 vim.keymap.set("v", "<C-u>", "{zz")
 
-
 -- vim.keymap.set("x", "p", "\"_dP")
-

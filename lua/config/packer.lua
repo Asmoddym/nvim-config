@@ -7,13 +7,13 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+  -- File browsing / project management
+
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.8',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-
-	use { "catppuccin/nvim", as = "catppuccin" }
 
 	use {
 		"nvim-telescope/telescope-file-browser.nvim",
@@ -26,14 +26,57 @@ return require('packer').startup(function(use)
 		},
 	}
 
+	use { 'ThePrimeagen/harpoon' }
+
+  -- Themes
+
+	use { "catppuccin/nvim", as = "catppuccin" }
+
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		{ run = ':TSUpdate' }
 	}
+  use { "folke/todo-comments.nvim", requires = { 'nvim-lua/plenary.nvim' } }
+
+  -- Git
 
 	use { 'tpope/vim-fugitive' }
+  use { 'lewis6991/gitsigns.nvim' }
+  
+  -- UI
+
+  use { 'preservim/nerdtree' }
+  -- use 'vim-airline/vim-airline'
+
+  -- use { 'folke/which-key.nvim', config = function()
+  --   require("which-key").setup({
+  --     triggers = { '<leader>', mode = {'n', 'v' }}})
+  -- end }
+
+  -- Startup
+
+  use { 'mhinz/vim-startify' }
+
+  -- use {
+  --   'goolord/alpha-nvim',
+  --   requires = { 'nvim-tree/nvim-web-devicons' },
+  --   config = function ()
+  --     local startify = require("alpha.themes.startify")
+  --
+  --     startify.file_icons.provider = "devicons"
+  --     require("alpha").setup(
+  --       startify.config
+  --     )
+  --   end
+  -- }
+
+
+  -- 
+  -- Utils
+  --
 
 	use { 'nvim-lua/plenary.nvim' }
-	use { 'ThePrimeagen/harpoon' }
+
+  use 'nvim-tree/nvim-web-devicons'
 
 end)

@@ -1,4 +1,4 @@
-utils = require('commands.utils')
+local utils = require('commands.utils')
 
 vim.api.nvim_create_user_command("GitFloatingDiff", function(args)
 	local path = nil
