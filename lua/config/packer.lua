@@ -44,8 +44,17 @@ return require('packer').startup(function(use)
   use { 'lewis6991/gitsigns.nvim' }
   
   -- UI
-
-  use { 'preservim/nerdtree' }
+use({
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    "MunifTanjim/nui.nvim",
+    -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+  }
+})
+  -- use { 'preservim/nerdtree' }
   -- use 'vim-airline/vim-airline'
 
   -- use { 'folke/which-key.nvim', config = function()
