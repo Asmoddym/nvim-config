@@ -2,7 +2,7 @@ utils = require("telescope._extensions.project.utils")
 
 local projects = {}
 for _, project in pairs(utils.get_project_objects()) do
-  table.insert(projects, { project.title, "call execute(\"tcd " .. project.path .. "\") | Neotree position=float filesystem" })
+  table.insert(projects, { project.title, "call execute(\"tcd " .. project.path .. "\") | Telescope find_files" }) 
 end
 
 vim.g.startify_commands = projects
