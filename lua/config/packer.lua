@@ -28,6 +28,10 @@ return require('packer').startup(function(use)
 
 	use { 'ThePrimeagen/harpoon' }
 
+  -- LSP (COC)
+
+  use { 'neoclide/coc.nvim', branch = "release" }
+
   -- Themes
 
 	use { "catppuccin/nvim", as = "catppuccin" }

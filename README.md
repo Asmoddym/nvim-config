@@ -1,6 +1,9 @@
 # Packer (install first)
 https://github.com/wbthomason/packer.nvim
 
+# coc.nvim (install node)
+https://github.com/neoclide/coc.nvim
+
 # Nice to have
 alias nvim to nvim +"Telescope find_files"
 

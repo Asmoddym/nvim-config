@@ -15,3 +15,4 @@ vim.keymap.set("v", "<C-u>", "{zz")
 
 vim.keymap.set("x", "<leader>p", "\"+p")
 vim.keymap.set("x", "<leader>y", "\"+y")
+
