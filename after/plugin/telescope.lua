@@ -15,6 +15,9 @@ telescope.setup {
 		find_files = {
 			hidden = true
 		},
+    oldfiles = {
+      cwd_only = true
+    }
 	},
 	extensions = {
 		file_browser = {

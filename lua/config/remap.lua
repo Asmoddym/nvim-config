@@ -16,3 +16,5 @@ vim.keymap.set("v", "<C-u>", "{zz")
 vim.keymap.set("x", "<leader>p", "\"+p")
 vim.keymap.set("x", "<leader>y", "\"+y")
 
+vim.keymap.set("n", "<leader><Left>", ":bprev<CR>")
+vim.keymap.set("n", "<leader><Right>", ":bnext<CR>")

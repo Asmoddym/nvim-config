@@ -4,6 +4,9 @@ https://github.com/wbthomason/packer.nvim
 # coc.nvim (install node)
 https://github.com/neoclide/coc.nvim
 
+# Copilot
+https://github.com/github/copilot.vim
+
 # Nice to have
 alias nvim to nvim +"Telescope find_files"
 
