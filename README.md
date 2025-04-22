@@ -1,10 +1,7 @@
-# Packer (install first)
+# Install first
 https://github.com/wbthomason/packer.nvim
-
-# coc.nvim (install node)
+https://github.com/neovim/nvim-lspconfig
 https://github.com/neoclide/coc.nvim
-
-# Copilot
 https://github.com/github/copilot.vim
 
 # Nice to have
