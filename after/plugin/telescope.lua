@@ -6,6 +6,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = 'Telescope old files' })
 
 local telescope = require('telescope')
+local project_actions = require("telescope._extensions.project.actions")
 
 telescope.setup {
 	defaults = {
@@ -13,17 +14,23 @@ telescope.setup {
 	},
 	pickers = {
 		find_files = {
-			hidden = true
-		},
+      hidden = true
+    },
     oldfiles = {
       cwd_only = true
     }
-	},
-	extensions = {
-		file_browser = {
-			hidden = { file_browser = true, folder_browser = true },
-		},
-	}
+  },
+  extensions = {
+    file_browser = {
+      hidden = { file_browser = true, folder_browser = true },
+    },
+    project = {
+      on_project_selected = function(prompt_bufnr)
+        project_actions.change_working_directory(prompt_bufnr, false)
+        vim.fn.execute("Telescope oldfiles")
+      end,
+    }
+  }
 }
 
 require("telescope").load_extension "file_browser"

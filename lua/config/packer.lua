@@ -4,29 +4,29 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
+  -- Packer can manage itself
+  use 'wbthomason/packer.nvim'
 
   -- File browsing / project management
 
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.8',
-		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+    -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
-	use {
-		"nvim-telescope/telescope-file-browser.nvim",
-		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-	}
-	use {
-		'nvim-telescope/telescope-project.nvim',
-		requires = {
-			'nvim-telescope/telescope.nvim',
-		},
-	}
+  use {
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  }
+  use {
+    'nvim-telescope/telescope-project.nvim',
+    requires = {
+      'nvim-telescope/telescope.nvim',
+    },
+  }
 
-	use { 'ThePrimeagen/harpoon' }
+  use { 'ThePrimeagen/harpoon' }
 
   -- LSP (COC)
 
@@ -34,62 +34,64 @@ return require('packer').startup(function(use)
 
   -- Themes
 
-	use { "catppuccin/nvim", as = "catppuccin" }
+  use { "catppuccin/nvim", as = "catppuccin" }
 
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		{ run = ':TSUpdate' }
-	}
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    { run = ':TSUpdate' }
+  }
   use { "folke/todo-comments.nvim", requires = { 'nvim-lua/plenary.nvim' } }
 
   -- Git
 
-	use { 'tpope/vim-fugitive' }
+  use { 'tpope/vim-fugitive' }
   use { 'lewis6991/gitsigns.nvim' }
-  
+
   -- UI
-use({
-  "nvim-neo-tree/neo-tree.nvim",
-  branch = "v3.x",
-  requires = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-    "MunifTanjim/nui.nvim",
-    -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-  }
-})
+
+  use { 'itchyny/lightline.vim' }
+  use({
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    }
+  })
   -- use { 'preservim/nerdtree' }
   -- use 'vim-airline/vim-airline'
 
   -- use { 'folke/which-key.nvim', config = function()
-  --   require("which-key").setup({
-  --     triggers = { '<leader>', mode = {'n', 'v' }}})
-  -- end }
+    --   require("which-key").setup({
+      --     triggers = { '<leader>', mode = {'n', 'v' }}})
+      -- end }
 
-  -- Startup
+      -- Startup
 
-  use { 'mhinz/vim-startify' }
+      use { 'mhinz/vim-startify' }
 
-  -- use {
-  --   'goolord/alpha-nvim',
-  --   requires = { 'nvim-tree/nvim-web-devicons' },
-  --   config = function ()
-  --     local startify = require("alpha.themes.startify")
-  --
-  --     startify.file_icons.provider = "devicons"
-  --     require("alpha").setup(
-  --       startify.config
-  --     )
-  --   end
-  -- }
+      -- use {
+        --   'goolord/alpha-nvim',
+        --   requires = { 'nvim-tree/nvim-web-devicons' },
+        --   config = function ()
+          --     local startify = require("alpha.themes.startify")
+          --
+          --     startify.file_icons.provider = "devicons"
+          --     require("alpha").setup(
+            --       startify.config
+            --     )
+            --   end
+            -- }
 
 
-  -- 
-  -- Utils
-  --
+            -- 
+            -- Utils
+            --
 
-	use { 'nvim-lua/plenary.nvim' }
+            use { 'nvim-lua/plenary.nvim' }
 
-  use 'nvim-tree/nvim-web-devicons'
+            use 'nvim-tree/nvim-web-devicons'
 
-end)
+          end)

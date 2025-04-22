@@ -9,6 +9,7 @@ function M.create_float(width_ratio, height_ratio, cmd)
 	local width = math.floor(ui.width * width_ratio)
 	local height = math.floor(ui.height * height_ratio)
   local buffer = 0
+local relative = 'win'
 
   if cmd == nil then
     buffer = vim.api.nvim_create_buf(false, true)
