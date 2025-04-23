@@ -3,3 +3,5 @@ plugin/
 !after/plugin/
 !lua/plugin/
 pack/
+
+coc-settings.json
