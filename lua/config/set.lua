@@ -34,3 +34,5 @@ vim.g.lightline = {
     gitbranch = 'FugitiveHead'
   },
 }
+
+vim.g.neovide_scale_factor = 0.85
