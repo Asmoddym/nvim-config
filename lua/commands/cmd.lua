@@ -1,6 +1,6 @@
 local utils = require('commands.utils')
 
-vim.api.nvim_create_user_command("CustomCommand", function(args)
+function run_custom_command(arg)
   local path = vim.fn.getcwd()
   local file = io.open(path .. "\\.custom-commands.txt", "r")
 
@@ -16,7 +16,7 @@ vim.api.nvim_create_user_command("CustomCommand", function(args)
     idx = string.find(line, ": ", 0) - 1
     local id = string.sub(line, 0, idx)
 
-    if id == args['fargs'][1] then
+    if id == arg then
       local cmd = string.sub(line, idx + 3)
       print("> " .. cmd)
 
@@ -28,4 +28,9 @@ vim.api.nvim_create_user_command("CustomCommand", function(args)
       end
     end
   end
+end
+
+vim.api.nvim_create_user_command("Cmd", function(args)
+  run_custom_command(args['fargs'][1])
 end, { nargs = "?" } )
+
