@@ -3,6 +3,8 @@ https://github.com/wbthomason/packer.nvim
 https://github.com/neovim/nvim-lspconfig
 https://github.com/neoclide/coc.nvim
 https://github.com/github/copilot.vim
+https://github.com/farmergreg/vim-lastplace
+
 
 # Nice to have
 alias nvim to nvim +"Telescope find_files"
