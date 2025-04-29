@@ -5,3 +5,4 @@ vim.api.nvim_create_user_command("Remember", function()
 
   utils.create_float(0.7, 0.7, ":e " .. file)
 end, {})
+

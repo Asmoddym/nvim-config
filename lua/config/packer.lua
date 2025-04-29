@@ -95,4 +95,6 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
 
   use 'farmergreg/vim-lastplace'
+
+  use "chrisgrieser/nvim-spider"
 end)
