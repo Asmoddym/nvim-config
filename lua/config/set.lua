@@ -20,7 +20,7 @@ vim.o.scrolloff = 8
 
 vim.o.updatetime = 50
 
-vim.o.scroll = 15
+-- vim.o.scroll = 15
 vim.o.pumheight = 10
 
 vim.g.lightline = {
