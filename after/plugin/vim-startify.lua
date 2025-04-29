@@ -9,7 +9,7 @@ vim.g.startify_commands = projects
 
 vim.g.startify_lists = {
   { type = "commands",  header = {"   Projects:"} },
-  { type = "files",     header = {"   Recent files:"}},
+  -- { type = "files",     header = {"   Recent files:"}},
 }
 
 vim.g.startify_custom_header_quotes = {{"coucou"}}
