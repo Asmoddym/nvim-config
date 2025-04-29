@@ -97,4 +97,6 @@ return require('packer').startup(function(use)
   use 'farmergreg/vim-lastplace'
 
   use "chrisgrieser/nvim-spider"
+
+  use { 'aaronik/Treewalker.nvim' }
 end)

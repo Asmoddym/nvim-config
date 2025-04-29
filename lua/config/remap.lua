@@ -15,11 +15,8 @@ vim.keymap.set("n", "U", "<C-r>")
 -- vim.keymap.set("n", "<C-d>", "}zz")
 -- vim.keymap.set("n", "<C-u>", "{zz")
 
-vim.keymap.set("n", "<C-j>", "}")
-vim.keymap.set("n", "<C-k>", "{")
-
-vim.keymap.set("v", "<C-j>", "}")
-vim.keymap.set("v", "<C-k>", "{")
+vim.keymap.set({"n", "v"}, "<C-j>", "}")
+vim.keymap.set({"n", "v"}, "<C-k>", "{")
 
 vim.keymap.set("x", "<leader>p", "\"+p")
 vim.keymap.set("x", "<leader>y", "\"+y")
