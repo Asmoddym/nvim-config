@@ -26,7 +26,7 @@ vim.o.pumheight = 10
 vim.g.lightline = {
   colorscheme = 'catppuccin',
   active = {
-    left = { { "mode", "paste" }, { "cocstatus", "readonly", "filename", "modified" } },
+    left = { { "mode", "paste" }, { "cocstatus", "readonly", "absolutepath", "modified" } },
     right = { { "lineinfo" }, { "percent" }, { "gitbranch" } }
   },
   component_function = {

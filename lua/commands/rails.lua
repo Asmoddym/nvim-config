@@ -17,12 +17,16 @@ vim.api.nvim_create_user_command("RailsSpecRunThisExample", function(args)
 		local command = "cd $ELEVO_ROOT_PATH && RAILS_ENV=test HEADLESS=false bundle exec rspec"
 
 		vim.cmd("vertical terminal " .. command .. " " .. path .. ":" .. line)
+    vim.api.nvim_feedkeys("i", "m", false)
 	end
 end, {desc = "Spec: run this particular example", nargs = "?" })
 
+vim.api.nvim_create_user_command("RailsFormat", function()
+  local path = vim.fn.expand("%")
 
--- Mappings
-
+  vim.cmd(":! cd $ELEVO_ROOT_PATH && bundle exec stree write --print-width=100 --plugins=plugin/trailing_comma " .. path)
+  vim.api.nvim_feedkeys(utils.termcode("<CR>") .. ":e" .. utils.termcode("<CR>") .. ":w" .. utils.termcode("<CR>"), 'm', false)
+end, {})
 
 vim.keymap.set("n", "<leader>rs", ":RailsSpecRunThisExample -tmux<CR>")
 
