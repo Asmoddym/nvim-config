@@ -26,9 +26,11 @@ function parse_file()
 
       current_cmd = { name = string.sub(line, 2, string.len(line) - 1) }
     else
-      local idx = string.find(line, ": ", 0)
+      if line ~= "" then
+        local idx = string.find(line, ": ", 0)
 
-      current_cmd[string.sub(line, 0, idx - 1)] = string.sub(line, idx + 2)
+        current_cmd[string.sub(line, 0, idx - 1)] = string.sub(line, idx + 2)
+      end
     end
   end
 
