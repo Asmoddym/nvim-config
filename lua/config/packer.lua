@@ -99,4 +99,7 @@ return require('packer').startup(function(use)
   use "chrisgrieser/nvim-spider"
 
   use { 'aaronik/Treewalker.nvim' }
+
+  use 'tpope/vim-abolish'
 end)
+
