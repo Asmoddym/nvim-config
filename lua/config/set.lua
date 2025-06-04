@@ -40,4 +40,4 @@ vim.g.lightline = {
   },
 }
 
-vim.g.neovide_scale_factor = 0.85
+vim.g.neovide_scale_factor = 0.75
