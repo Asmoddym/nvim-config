@@ -32,6 +32,11 @@ return require('packer').startup(function(use)
 
   use { 'neoclide/coc.nvim', branch = "release" }
 
+  -- Rails
+  
+  use { 'tpope/vim-rails' }
+  use { 'tpope/vim-bundler' }
+
   -- Themes
 
   use { "catppuccin/nvim", as = "catppuccin" }
@@ -49,6 +54,7 @@ return require('packer').startup(function(use)
 
   -- UI
 
+  use { 'lukas-reineke/indent-blankline.nvim' }
   use { 'itchyny/lightline.vim' }
   use({
     "nvim-neo-tree/neo-tree.nvim",
