@@ -19,3 +19,5 @@ vim.g.copilot_filetypes = {
   ['ruby'] = true,
   ['lua'] = true
 }
+
+require("CopilotChat").setup({})

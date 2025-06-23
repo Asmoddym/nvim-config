@@ -14,6 +14,8 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+ 
+  use { "CopilotC-Nvim/CopilotChat.nvim" }
 
   use {
     "nvim-telescope/telescope-file-browser.nvim",
@@ -34,8 +36,8 @@ return require('packer').startup(function(use)
 
   -- Rails
   
-  use { 'tpope/vim-rails' }
-  use { 'tpope/vim-bundler' }
+  -- use { 'tpope/vim-rails' }
+  -- use { 'tpope/vim-bundler' }
 
   -- Themes
 

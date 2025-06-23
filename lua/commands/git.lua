@@ -4,12 +4,12 @@ vim.api.nvim_create_user_command("GitFloatingDiff", function(args)
 	local path = nil
 
 	if args['fargs'][1] == '-all' then
-		path = "."
+		path = " -- :^.forestadmin-schema.json"
 	else
 		path = vim.fn.expand("%")
 	end
 
-	utils.create_float(0.95, 0.92, ":Git ++curwin -p diff -- :^.forestadmin-schema.json" .. path)
+	utils.create_float(0.95, 0.92, ":Git ++curwin -p diff " .. path)
 end, {nargs = "?" })
 
 
