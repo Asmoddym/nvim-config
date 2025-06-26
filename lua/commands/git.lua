@@ -12,6 +12,12 @@ vim.api.nvim_create_user_command("GitFloatingDiff", function(args)
 	utils.create_float(0.95, 0.92, ":Git ++curwin -p diff " .. path)
 end, {nargs = "?" })
 
+vim.api.nvim_create_user_command("Gpush", function()
+  local branch = vim.fn.system("git branch --show-current"):gsub("%s+", "")
+
+  vim.cmd("G push origin " .. branch)
+end, {})
+
 
 -- Mappings
 
