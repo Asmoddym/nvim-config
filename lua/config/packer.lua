@@ -109,7 +109,5 @@ return require('packer').startup(function(use)
   use { 'aaronik/Treewalker.nvim' }
 
   use 'tpope/vim-abolish'
-
-  use 'jake-stewart/multicursor.nvim'
 end)
 
