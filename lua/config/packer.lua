@@ -77,7 +77,7 @@ return require('packer').startup(function(use)
   -- end }
 
   -- Startup
-
+ 
   use { 'mhinz/vim-startify' }
 
   -- use {
@@ -100,7 +100,7 @@ return require('packer').startup(function(use)
 
   use { 'nvim-lua/plenary.nvim' }
 
-  use 'nvim-tree/nvim-web-devicons'
+  USE 'nvim-tree/nvim-web-devicons'
 
   use 'farmergreg/vim-lastplace'
 
@@ -109,5 +109,7 @@ return require('packer').startup(function(use)
   use { 'aaronik/Treewalker.nvim' }
 
   use 'tpope/vim-abolish'
+
+  use 'mg979/vim-visual-multi'
 end)
 
