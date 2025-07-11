@@ -100,7 +100,7 @@ return require('packer').startup(function(use)
 
   use { 'nvim-lua/plenary.nvim' }
 
-  USE 'nvim-tree/nvim-web-devicons'
+  use 'nvim-tree/nvim-web-devicons'
 
   use 'farmergreg/vim-lastplace'
 
