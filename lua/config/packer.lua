@@ -68,6 +68,8 @@ return require('packer').startup(function(use)
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     }
   })
+
+  use { "RRethy/vim-illuminate" }
   -- use { 'preservim/nerdtree' }
   -- use 'vim-airline/vim-airline'
 
