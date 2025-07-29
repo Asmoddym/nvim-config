@@ -34,11 +34,6 @@ return require('packer').startup(function(use)
 
   use { 'neoclide/coc.nvim', branch = "release" }
 
-  -- Rails
-  
-  -- use { 'tpope/vim-rails' }
-  -- use { 'tpope/vim-bundler' }
-
   -- Themes
 
   use { "catppuccin/nvim", as = "catppuccin" }
@@ -95,6 +90,11 @@ return require('packer').startup(function(use)
   --   end
   -- }
 
+  -- Rails
+  
+  -- use { 'tpope/vim-rails' }
+  -- use { 'tpope/vim-bundler' }
+
 
   -- 
   -- Utils
@@ -108,7 +108,7 @@ return require('packer').startup(function(use)
 
   use "chrisgrieser/nvim-spider"
 
-  use { 'aaronik/Treewalker.nvim' }
+  -- use { 'aaronik/Treewalker.nvim' }
 
   use 'tpope/vim-abolish'
 
