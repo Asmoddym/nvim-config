@@ -9,6 +9,5 @@ https://github.com/farmergreg/vim-lastplace
 
 https://github.com/tpope/vim-obsession
 https://github.com/iamcco/markdown-preview.nvim
-https://github.com/nvim-neo-tree/neo-tree.nvim
 
-https://github.com/mg979/vim-visual-multi
+https://www.youtube.com/watch?v=zo6f3KZPHyc
