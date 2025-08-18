@@ -2,7 +2,7 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 vim.o.nu = true
-vim.o.relativenumber = true
+-- vim.o.relativenumber = true
 
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
@@ -41,3 +41,4 @@ vim.g.lightline = {
 }
 
 vim.g.neovide_scale_factor = 0.75
+

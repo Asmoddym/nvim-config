@@ -96,6 +96,10 @@ return require('packer').startup(function(use)
   -- use { 'tpope/vim-bundler' }
 
 
+  -- DUO
+
+  -- use {   "git@gitlab.com:gitlab-org/editor-extensions/gitlab.vim.git" }
+
   -- 
   -- Utils
   --
