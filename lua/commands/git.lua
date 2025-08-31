@@ -25,7 +25,7 @@ vim.api.nvim_create_user_command("Gpull", function()
   vim.cmd("G pull origin ".. branch)
 end, {})
 
-vim.api.nvim_create_user_command("GOpenMR", function()
+vim.api.nvim_create_user_command("GOpenCommit", function()
   local r,c = unpack(vim.api.nvim_win_get_cursor(0))
 
   local url = "https://gitlab.com/elevo/elevo-rails/-/commit/" .. vim.fn.system("git rev-parse $(git blame " .. vim.fn.expand("%") .. " -L " .. r .. "," .. r .. " | cut -d' ' -f 1)"):gsub("%s+", "")

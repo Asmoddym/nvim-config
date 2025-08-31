@@ -14,11 +14,13 @@ vim.o.smartindent = true
 vim.o.swapfile = false
 vim.o.backup = false
 
-if vim.g.neovide then
-vim.o.undodir = os.getenv("HOMEPATH") .. "/.vim-undodir"
-else
-vim.o.undodir = os.getenv("HOME") .. "/.vim-undodir"
+local path = os.getenv("HOME")
+
+if path == nil or path == '' then
+  path = os.getenv("HOMEPATH")
 end
+vim.o.undodir = path .. "/.vim-undodir"
+
 vim.o.undofile = true
 
 vim.o.scrolloff = 8
