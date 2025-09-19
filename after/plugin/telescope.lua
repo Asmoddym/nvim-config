@@ -19,6 +19,10 @@ telescope.setup {
     },
     oldfiles = {
       cwd_only = true
+    },
+    buffers = {
+      sort_lastused = true,
+      sort_mru = true
     }
   },
   extensions = {
