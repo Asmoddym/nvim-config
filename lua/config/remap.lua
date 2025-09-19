@@ -39,3 +39,8 @@ vim.keymap.set("v", "<leader>S", "y:%s/<C-r>\"//gI<left><left><Left> <C-BS>")
 vim.keymap.set("n", "<leader><Up>", ":tabprev<CR>")
 vim.keymap.set("n", "<leader><Down>", ":tabnext<CR>")
 vim.keymap.set("n", "<C-w>V", ":tabnew<CR>")
+
+vim.keymap.set("n", "<leader>nR", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>")
+vim.keymap.set("n", "<leader>nr", "<cmd>lua require('neotest').run.run()<CR>")
+vim.keymap.set("n", "<leader>no", "<cmd>lua require('neotest').output_panel.toggle()<CR>")
+vim.keymap.set("n", "<leader>ns", "<cmd>lua require('neotest').summary.open()<CR>")

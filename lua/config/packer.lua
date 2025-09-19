@@ -97,6 +97,24 @@ return require('packer').startup(function(use)
   -- use { 'tpope/vim-rails' }
   -- use { 'tpope/vim-bundler' }
 
+  use({
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "olimorris/neotest-rspec"
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rspec"),
+        }
+      })
+    end
+  })
+
 
   -- DUO
 
@@ -120,25 +138,13 @@ return require('packer').startup(function(use)
 
   use 'mg979/vim-visual-multi'
 
-
-
-
-  use({
-    "nvim-neotest/neotest",
-    requires = {
-      "nvim-neotest/nvim-nio",
-      "nvim-lua/plenary.nvim",
-      "antoinemadec/FixCursorHold.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "olimorris/neotest-rspec"
-    },
-    config = function()
-      require("neotest").setup({
-        adapters = {
-          require("neotest-rspec"),
-        }
-      })
-    end
-  })
+use({
+  'Wansmer/treesj',
+  requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
+  config = function()
+    require('treesj').setup({--[[ your config ]]})
+    -- <leader>m is the default keymap to toggle
+  end,
+})
 end)
 
