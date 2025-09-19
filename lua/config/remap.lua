@@ -38,3 +38,4 @@ vim.keymap.set("v", "<leader>S", "y:%s/<C-r>\"//gI<left><left><Left> <C-BS>")
 
 vim.keymap.set("n", "<leader><Up>", ":tabprev<CR>")
 vim.keymap.set("n", "<leader><Down>", ":tabnext<CR>")
+vim.keymap.set("n", "<C-w>V", ":tabnew<CR>")

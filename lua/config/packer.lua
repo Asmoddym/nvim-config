@@ -65,6 +65,7 @@ return require('packer').startup(function(use)
     }
   })
 
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   use { "RRethy/vim-illuminate" }
   -- use { 'preservim/nerdtree' }
   -- use 'vim-airline/vim-airline'
@@ -118,5 +119,26 @@ return require('packer').startup(function(use)
   use 'tpope/vim-abolish'
 
   use 'mg979/vim-visual-multi'
+
+
+
+
+  use({
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "olimorris/neotest-rspec"
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rspec"),
+        }
+      })
+    end
+  })
 end)
 

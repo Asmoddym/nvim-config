@@ -22,6 +22,7 @@ telescope.setup {
     },
     buffers = {
       sort_lastused = true,
+      show_all_buffers = false,
       sort_mru = true
     }
   },
