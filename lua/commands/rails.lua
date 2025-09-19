@@ -36,4 +36,3 @@ vim.api.nvim_create_user_command("RailsFormat", function()
 end, {})
 
 vim.keymap.set("n", "<leader>rs", ":RailsSpecRunThisExample -tmux<CR>")
-
