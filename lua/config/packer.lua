@@ -7,16 +7,15 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+
   -- File browsing / project management
 
+
+  -- Telescope stuff
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
-    -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
- 
-  use { "CopilotC-Nvim/CopilotChat.nvim" }
-
   use {
     "nvim-telescope/telescope-file-browser.nvim",
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
@@ -28,32 +27,8 @@ return require('packer').startup(function(use)
     },
   }
 
+  -- Navigation
   use { 'ThePrimeagen/harpoon' }
-
-  -- LSP (COC)
-
-  use { 'neoclide/coc.nvim', branch = "release" }
-
-  -- Themes
-
-  use { "catppuccin/nvim", as = "catppuccin" }
-
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    { run = ':TSUpdate' }
-  }
-  use { "folke/todo-comments.nvim", requires = { 'nvim-lua/plenary.nvim' } }
-
-  -- Git
-
-  use { 'tpope/vim-fugitive' }
-  use { 'lewis6991/gitsigns.nvim' }
-  use "sindrets/diffview.nvim" 
-
-  -- UI
-
-  use { 'lukas-reineke/indent-blankline.nvim' }
-  use { 'itchyny/lightline.vim' }
   use({
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -65,37 +40,54 @@ return require('packer').startup(function(use)
     }
   })
 
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
-  use { "RRethy/vim-illuminate" }
-  -- use { 'preservim/nerdtree' }
-  -- use 'vim-airline/vim-airline'
 
-  -- use { 'folke/which-key.nvim', config = function()
-  --   require("which-key").setup({
-  --     triggers = { '<leader>', mode = {'n', 'v' }}})
-  -- end }
+  -- AI
+ 
+
+  use { "CopilotC-Nvim/CopilotChat.nvim" }
+  -- use {   "git@gitlab.com:gitlab-org/editor-extensions/gitlab.vim.git" }
+
+
+  -- LSP (COC)
+
+
+  use { 'neoclide/coc.nvim', branch = "release" }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    { run = ':TSUpdate' }
+  }
+
+
+  -- Git
+
+
+  use { 'tpope/vim-fugitive' }
+  use { 'lewis6991/gitsigns.nvim' }
+  use "sindrets/diffview.nvim" 
+
+
+  -- UI
+
+
+  -- Theme
+  use { "catppuccin/nvim", as = "catppuccin" }
+
+  use { "folke/todo-comments.nvim", requires = { 'nvim-lua/plenary.nvim' } }
+  use { 'lukas-reineke/indent-blankline.nvim' }
+  use { 'itchyny/lightline.vim' }
+
+  -- Tabs / Buffers
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
+  -- Highlighting
+  use { "RRethy/vim-illuminate" }
 
   -- Startup
- 
   use { 'mhinz/vim-startify' }
 
-  -- use {
-  --   'goolord/alpha-nvim',
-  --   requires = { 'nvim-tree/nvim-web-devicons' },
-  --   config = function ()
-  --     local startify = require("alpha.themes.startify")
-  --
-  --     startify.file_icons.provider = "devicons"
-  --     require("alpha").setup(
-  --       startify.config
-  --     )
-  --   end
-  -- }
 
   -- Rails
   
-  -- use { 'tpope/vim-rails' }
-  -- use { 'tpope/vim-bundler' }
 
   use({
     "nvim-neotest/neotest",
@@ -116,35 +108,54 @@ return require('packer').startup(function(use)
   })
 
 
-  -- DUO
-
-  -- use {   "git@gitlab.com:gitlab-org/editor-extensions/gitlab.vim.git" }
-
-  -- 
   -- Utils
-  --
+
 
   use { 'nvim-lua/plenary.nvim' }
-
   use 'nvim-tree/nvim-web-devicons'
-
   use 'farmergreg/vim-lastplace'
-
   use "chrisgrieser/nvim-spider"
 
-  -- use { 'aaronik/Treewalker.nvim' }
-
   use 'tpope/vim-abolish'
-
   use 'mg979/vim-visual-multi'
 
-use({
-  'Wansmer/treesj',
-  requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
-  config = function()
-    require('treesj').setup({--[[ your config ]]})
-    -- <leader>m is the default keymap to toggle
-  end,
-})
+  use({
+    'Wansmer/treesj',
+    requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
+    config = function()
+      require('treesj').setup({
+        max_join_length = 1000,
+      })
+      -- <leader>m is the default keymap to toggle
+    end,
+  })
+
+
+  -- old / not used
+
+
+  -- use { 'aaronik/Treewalker.nvim' }
+  -- use { 'preservim/nerdtree' }
+  -- use 'vim-airline/vim-airline'
+
+  -- use { 'folke/which-key.nvim', config = function()
+  --   require("which-key").setup({
+  --     triggers = { '<leader>', mode = {'n', 'v' }}})
+  -- end }
+
+  -- use {
+  --   'goolord/alpha-nvim',
+  --   requires = { 'nvim-tree/nvim-web-devicons' },
+  --   config = function ()
+  --     local startify = require("alpha.themes.startify")
+  --
+  --     startify.file_icons.provider = "devicons"
+  --     require("alpha").setup(
+  --       startify.config
+  --     )
+  --   end
+  -- }
+  -- use { 'tpope/vim-rails' }
+  -- use { 'tpope/vim-bundler' }
 end)
 
