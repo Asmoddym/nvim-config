@@ -27,25 +27,11 @@ return require('packer').startup(function(use)
     },
   }
 
-  -- Navigation
-  -- use { 'ThePrimeagen/harpoon' }
-  -- use({
-  --   "nvim-neo-tree/neo-tree.nvim",
-  --   branch = "v3.x",
-  --   requires = {
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-  --     "MunifTanjim/nui.nvim",
-  --     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-  --   }
-  -- })
-  --
 
   -- AI
  
 
   use { "CopilotC-Nvim/CopilotChat.nvim" }
-  -- use {   "git@gitlab.com:gitlab-org/editor-extensions/gitlab.vim.git" }
 
 
   -- LSP (COC)
@@ -84,28 +70,6 @@ return require('packer').startup(function(use)
 
   -- Startup
   use { 'mhinz/vim-startify' }
-
-
-  -- Rails
-  
-
-  use({
-    "nvim-neotest/neotest",
-    requires = {
-      "nvim-neotest/nvim-nio",
-      "nvim-lua/plenary.nvim",
-      "antoinemadec/FixCursorHold.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "olimorris/neotest-rspec"
-    },
-    config = function()
-      require("neotest").setup({
-        adapters = {
-          require("neotest-rspec"),
-        }
-      })
-    end
-  })
 
 
   -- Utils
@@ -162,5 +126,42 @@ return require('packer').startup(function(use)
   -- }
   -- use { 'tpope/vim-rails' }
   -- use { 'tpope/vim-bundler' }
-end)
 
+  -- Navigation
+  -- use { 'ThePrimeagen/harpoon' }
+  -- use({
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   branch = "v3.x",
+  --   requires = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+  --     "MunifTanjim/nui.nvim",
+  --     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+  --   }
+  -- })
+  --
+  -- use {   "git@gitlab.com:gitlab-org/editor-extensions/gitlab.vim.git" }
+  --
+  --
+  -- Rails
+  --
+  -- use({
+  --   "nvim-neotest/neotest",
+  --   requires = {
+  --     "nvim-neotest/nvim-nio",
+  --     "nvim-lua/plenary.nvim",
+  --     "antoinemadec/FixCursorHold.nvim",
+  --     "nvim-treesitter/nvim-treesitter",
+  --     "olimorris/neotest-rspec"
+  --   },
+  --   config = function()
+  --     require("neotest").setup({
+  --       adapters = {
+  --         require("neotest-rspec"),
+  --       }
+  --     })
+  --   end
+  -- })
+  --
+
+end)
