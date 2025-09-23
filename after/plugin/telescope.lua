@@ -21,7 +21,7 @@ telescope.setup {
       cwd_only = true
     },
     buffers = {
-      sort_lastused = true,
+      -- sort_lastused = true,
       show_all_buffers = false,
       sort_mru = true
     }
