@@ -7,6 +7,20 @@ function is_new_cmd(line)
   return first_char == '[' and last_char == ']' 
 end
 
+function extension_keyword()
+  if vim.loop.os_uname().sysname == "Windows_NT" then
+    return ".exe"
+  else
+    return ""
+  end
+end
+
+function replace_keywords(str)
+  str = str:gsub("%[%[extension%]%]", extension_keyword())
+
+  return str
+end
+
 function parse_file()
   local path = vim.fn.getcwd()
   local file = io.open(path .. "\\.custom-commands.txt", "r")
@@ -28,8 +42,10 @@ function parse_file()
     else
       if line ~= "" then
         local idx = string.find(line, ": ", 0)
+        local key = string.sub(line, 0, idx - 1) 
+        local value = replace_keywords(string.sub(line, idx + 2))
 
-        current_cmd[string.sub(line, 0, idx - 1)] = string.sub(line, idx + 2)
+        current_cmd[key] = value
       end
     end
   end

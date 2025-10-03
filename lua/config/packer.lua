@@ -83,17 +83,6 @@ return require('packer').startup(function(use)
   use 'tpope/vim-abolish'
   use 'mg979/vim-visual-multi'
 
-  use({
-    'Wansmer/treesj',
-    requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
-    config = function()
-      require('treesj').setup({
-        max_join_length = 1000,
-      })
-      -- <leader>m is the default keymap to toggle
-    end,
-  })
-
   use {
     "mikavilpas/yazi.nvim",
     requires = { "nvim-lua/plenary.nvim" }
@@ -163,5 +152,16 @@ return require('packer').startup(function(use)
   --   end
   -- })
   --
+
+  -- use({
+    --   'Wansmer/treesj',
+    --   requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
+    --   config = function()
+      --     require('treesj').setup({
+        --       max_join_length = 1000,
+        --     })
+        --     -- <leader>m is the default keymap to toggle
+        --   end,
+        -- })
 
 end)
