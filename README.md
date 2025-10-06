@@ -11,3 +11,8 @@ https://github.com/tpope/vim-obsession
 https://github.com/iamcco/markdown-preview.nvim
 
 https://www.youtube.com/watch?v=zo6f3KZPHyc
+
+
+# LATER
+
+delete terminal buffers automatically

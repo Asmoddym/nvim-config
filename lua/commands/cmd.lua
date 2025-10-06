@@ -7,16 +7,24 @@ function is_new_cmd(line)
   return first_char == '[' and last_char == ']' 
 end
 
-function extension_keyword()
+function os_type()
   if vim.loop.os_uname().sysname == "Windows_NT" then
-    return ".exe"
+    return "windows"
   else
-    return ""
+    return "unix"
+  end
+end
+
+function script_extension_keyword()
+  if os_type() == "windows" then
+    return ".bat"
+  else
+    return ".sh"
   end
 end
 
 function replace_keywords(str)
-  str = str:gsub("%[%[extension%]%]", extension_keyword())
+  str = str:gsub("%[%[script_extension%]%]", script_extension_keyword())
 
   return str
 end
@@ -56,10 +64,12 @@ function parse_file()
 end
 
 function run_cmd(cmd)
+  local cmd_key = "cmd_" .. os_type()
+
   if cmd["mode"] == "async" then
-    vim.cmd(cmd["cmd"])
+    vim.cmd(cmd[cmd_key])
   elseif cmd["mode"] == "float" then
-    utils.create_float(0.6, 0.6, cmd["cmd"]) 
+    utils.create_float(0.6, 0.6, cmd[cmd_key]) 
 
     if cmd["after"] ~= nil then
       local after = cmd.after:gsub("<CR>", utils.termcode("<CR>"))
