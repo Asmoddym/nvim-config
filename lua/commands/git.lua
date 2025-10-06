@@ -18,6 +18,12 @@ vim.api.nvim_create_user_command("Gpush", function()
   vim.cmd("G push origin " .. branch)
 end, {})
 
+vim.api.nvim_create_user_command("Gpushf", function()
+  local branch = vim.fn.system("git branch --show-current"):gsub("%s+", "")
+
+  vim.cmd("G push origin " .. branch .. " --force")
+end, {})
+
 vim.api.nvim_create_user_command("Gpull", function()
   local branch = vim.fn.system("git branch --show-current"):gsub("%s+", "")
 
