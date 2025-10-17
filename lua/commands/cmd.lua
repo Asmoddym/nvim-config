@@ -29,9 +29,17 @@ function replace_keywords(str)
   return str
 end
 
+function custom_commands_path()
+  if os_type() == "windows" then
+    return "\\.custom-commands.txt"
+  else
+    return "/.custom-commands.txt"
+  end
+end
+
 function parse_file()
   local path = vim.fn.getcwd()
-  local file = io.open(path .. "\\.custom-commands.txt", "r")
+  local file = io.open(path .. custom_commands_path(), "r")
 
   if file == nil then
     return
