@@ -39,10 +39,3 @@ vim.api.nvim_create_user_command("GOpenCommit", function()
   vim.cmd("silent !open " .. url)
 end, {})
 
-
--- Mappings
-
-
-vim.keymap.set("n", "<leader>gd", ":GitFloatingDiff<CR>")
-vim.keymap.set("n", "<leader>gD", ":GitFloatingDiff -all<CR>")
-
