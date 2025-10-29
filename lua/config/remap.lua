@@ -44,7 +44,6 @@ vim.keymap.set("n", "<leader>nR", "<cmd>lua require('neotest').run.run(vim.fn.ex
 vim.keymap.set("n", "<leader>nr", "<cmd>lua require('neotest').run.run()<CR>")
 vim.keymap.set("n", "<leader>no", "<cmd>lua require('neotest').output_panel.toggle()<CR>")
 vim.keymap.set("n", "<leader>ns", "<cmd>lua require('neotest').summary.open()<CR>")
-vim.keymap.set("n", "<BACKSPACE>", "b")
 
 vim.keymap.set("i", "<C-TAB>", "<TAB>")
      
