@@ -44,3 +44,21 @@ vim.g.lightline = {
 
 vim.g.neovide_scale_factor = 0.75
 
+-- Taken from
+--
+-- https://www.reddit.com/r/neovim/comments/16qls9t/what_value_do_you_set_for_listchars/
+-- https://www.reddit.com/r/neovim/comments/1430ts5/how_do_i_highlight_a_match_group_only_in_normal/
+
+vim.cmd([[match TrailingWhitespace /\s\+$/]])
+
+vim.api.nvim_create_autocmd("InsertEnter", {
+  callback = function()
+    vim.cmd.hi("clear TrailingWhitespace")
+  end
+})
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+  callback = function()
+    vim.cmd.hi("TrailingWhitespace ctermbg=Red guibg=Red")
+  end
+})
