@@ -27,9 +27,6 @@ telescope.setup {
     }
   },
   extensions = {
-    file_browser = {
-      hidden = { file_browser = true, folder_browser = true },
-    },
     project = {
       on_project_selected = function(prompt_bufnr)
         project_actions.change_working_directory(prompt_bufnr, false)
@@ -39,6 +36,5 @@ telescope.setup {
   }
 }
 
-require("telescope").load_extension "file_browser"
 require("telescope").load_extension "project"
 
