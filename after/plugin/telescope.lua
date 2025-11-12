@@ -11,7 +11,12 @@ local project_actions = require("telescope._extensions.project.actions")
 telescope.setup {
 	defaults = {
 		file_ignore_patterns = {  ".git\\", ".git/" },
-    initial_mode = "normal"
+    initial_mode = "normal",
+    mappings = {
+      n = {
+        ["q"] = require("telescope.actions").close,
+      },
+    }
 	},
 	pickers = {
 		find_files = {

@@ -95,9 +95,6 @@ return require('packer').startup(function(use)
     requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
   })
 
-  use { "j-hui/fidget.nvim", config = function() require("fidget").setup() end }
-
-
 
   -- old / not used
 
