@@ -90,6 +90,17 @@ return require('packer').startup(function(use)
   }
 
   use { 'nvim-mini/mini.surround' }
+  use({
+    'Wansmer/treesj',
+    requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
+    config = function()
+      require('treesj').setup({
+        max_join_length = 1000,
+      })
+      -- <leader>m is the default keymap to toggle
+    end,
+  })
+
 
 
   -- old / not used
@@ -155,16 +166,5 @@ return require('packer').startup(function(use)
   --   end
   -- })
   --
-
-  -- use({
-    --   'Wansmer/treesj',
-    --   requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
-    --   config = function()
-      --     require('treesj').setup({
-        --       max_join_length = 1000,
-        --     })
-        --     -- <leader>m is the default keymap to toggle
-        --   end,
-        -- })
 
 end)
