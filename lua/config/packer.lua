@@ -93,12 +93,6 @@ return require('packer').startup(function(use)
   use({
     'Wansmer/treesj',
     requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
-    config = function()
-      require('treesj').setup({
-        max_join_length = 1000,
-      })
-      -- <leader>m is the default keymap to toggle
-    end,
   })
 
 
