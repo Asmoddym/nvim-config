@@ -3,3 +3,7 @@
 --
 -- require("notify").setup()
 --
+
+-- require("mini.notify").setup()
+-- require("notify").setup()
+

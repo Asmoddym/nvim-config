@@ -95,8 +95,15 @@ return require('packer').startup(function(use)
     requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
   })
 
--- use { "j-hui/fidget.nvim" }
--- use 'rcarriga/nvim-notify'
+  use 'nvim-mini/mini.clue'
+
+
+  -- Notifications (doesn't work for CocNotificationProgress)
+
+  -- use { "j-hui/fidget.nvim" }
+  -- use 'rcarriga/nvim-notify'
+  -- use { 'nvim-mini/mini.notify' }
+  -- use 'rcarriga/nvim-notify'
 
 
   -- old / not used

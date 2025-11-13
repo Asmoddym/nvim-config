@@ -62,3 +62,10 @@ vim.api.nvim_create_autocmd("InsertLeave", {
     vim.cmd.hi("TrailingWhitespace ctermbg=Red guibg=Red")
   end
 })
+
+--Taken from https://www.jackfranklin.co.uk/blog/code-folding-in-vim-neovim/
+
+vim.opt.foldmethod = "expr"
+-- vim.opt.foldmethod = "indent"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99
