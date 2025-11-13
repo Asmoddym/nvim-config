@@ -1,3 +1,3 @@
 vim.keymap.set('n', '<leader>m', require('treesj').toggle)
 
-require('treesj').setup({ max_join_length = 1000 })
+require('treesj').setup({ use_default_keymaps = false, max_join_length = 1000 })

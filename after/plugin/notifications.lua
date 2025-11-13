@@ -1,0 +1,5 @@
+-- local fidget = require("fidget")
+-- fidget.setup()
+--
+-- require("notify").setup()
+--
