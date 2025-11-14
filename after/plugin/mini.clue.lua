@@ -15,6 +15,9 @@ miniclue.setup({
     -- surround
     { mode = 'n', keys = 's' },
 
+    -- git
+    { mode = 'n', keys = 'g' },
+
     -- Marks
     { mode = 'n', keys = "'" },
     { mode = 'n', keys = '`' },

@@ -4,7 +4,7 @@ vim.keymap.set('n', '<leader>fg', ":Telescope live_grep<CR>i", { desc = 'Telesco
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = 'Telescope old files' })
-vim.keymap.set('n', '<leader>G', builtin.git_status, { desc = 'Telescope git files' })
+vim.keymap.set('n', '<leader>gf', builtin.git_status, { desc = 'Telescope git files' })
 
 local telescope = require('telescope')
 local project_actions = require("telescope._extensions.project.actions")
