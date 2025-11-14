@@ -99,6 +99,7 @@ return require('packer').startup(function(use)
 
   use 'nvim-mini/mini.clue'
 
+  use 'nvim-pack/nvim-spectre'
 
   -- Notifications (doesn't work for CocNotificationProgress)
 
