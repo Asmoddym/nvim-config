@@ -35,4 +35,4 @@ vim.api.nvim_create_user_command("RailsFormat", function()
   vim.api.nvim_feedkeys(utils.termcode("<CR>") .. ":e" .. utils.termcode("<CR>") .. ":w" .. utils.termcode("<CR>"), 'm', false)
 end, {})
 
-vim.keymap.set("n", "<leader>rs", ":RailsSpecRunThisExample -tmux<CR>")
+vim.keymap.set("n", "<leader>rs", ":RailsSpecRunThisExample -tmux<CR>", { desc = "Run spec in tmux" })

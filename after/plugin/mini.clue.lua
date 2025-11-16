@@ -12,8 +12,11 @@ miniclue.setup({
     { mode = 'n', keys = 'g' },
     { mode = 'x', keys = 'g' },
 
-    -- surround
+    -- surround / search
     { mode = 'n', keys = 's' },
+
+    -- replace
+    { mode = 'n', keys = 'r' },
 
     -- git
     { mode = 'n', keys = 'g' },
