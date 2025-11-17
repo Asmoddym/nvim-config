@@ -15,6 +15,7 @@ vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual(
 })
 
 vim.keymap.set("n", "<leader>rl", ":s/<C-r><C-w>//gI<Left><Left><Left> <C-BS>", { desc = "replace word in line" })
+vim.keymap.set("v", "<leader>rl", "y:s/<C-r>\"//gI<left><left><Left> <C-BS>", { desc = "replace selection in line" })
 vim.keymap.set("n", "<leader>rf", ":%s/<C-r><C-w>//gI<Left><Left><Left> <C-BS>", { desc = "replace word across file" })
 vim.keymap.set("v", "<leader>rf", "y:%s/<C-r>\"//gI<left><left><Left> <C-BS>", { desc = "replace selection across file" })
 
