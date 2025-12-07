@@ -4,6 +4,8 @@ vim.o.splitbelow = true
 vim.o.nu = true
 -- vim.o.relativenumber = true
 
+vim.opt.guicursor = ""
+
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
