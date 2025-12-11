@@ -101,6 +101,8 @@ return require('packer').startup(function(use)
 
   use 'nvim-pack/nvim-spectre'
 
+  use 'mbbill/undotree'
+
   -- Notifications (doesn't work for CocNotificationProgress)
 
   -- use { "j-hui/fidget.nvim" }
