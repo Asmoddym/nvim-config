@@ -16,3 +16,10 @@ https://www.youtube.com/watch?v=zo6f3KZPHyc
 # LATER
 
 delete terminal buffers automatically
+
+# REMINDERS
+
+from vim-abolish:
+  - crs: coerce to snake_case
+  - crc: coerce to camelCase
+  - crm: coerce to MixedCase
