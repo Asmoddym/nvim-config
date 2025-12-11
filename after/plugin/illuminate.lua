@@ -1,4 +1,10 @@
-require("illuminate").configure({})
+require("illuminate").configure({
+  providers ={
+    'lsp',
+    -- 'treesitter',
+    'regex'
+  }
+})
 
 -- change the highlight style
 
