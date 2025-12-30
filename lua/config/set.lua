@@ -16,6 +16,8 @@ vim.o.smartindent = true
 vim.o.swapfile = false
 vim.o.backup = false
 
+vim.o.magic = true
+
 local path = os.getenv("HOME")
 
 if path == nil or path == '' then
