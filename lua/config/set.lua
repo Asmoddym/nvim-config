@@ -55,18 +55,24 @@ vim.g.neovide_scale_factor = 0.75
 
 vim.cmd([[match TrailingWhitespace /\s\+$/]])
 
-vim.api.nvim_create_autocmd("InsertEnter", {
-  callback = function()
-    vim.cmd.hi("clear TrailingWhitespace")
-  end
-})
+vim.cmd([[match NonBreakingSpace / /]]) -- This is a non-breaking space character
 
-vim.api.nvim_create_autocmd("InsertLeave", {
+vim.api.nvim_create_autocmd("BufWinEnter", {
   callback = function()
+    -- vim.cmd.hi("clear TrailingWhitespace")
+    -- vim.cmd.hi("clear NonBreakingSpace")
     vim.cmd.hi("TrailingWhitespace ctermbg=Red guibg=Red")
+    vim.cmd.hi("NonBreakingSpace ctermbg=Red guibg=Red")
   end
 })
 
+-- vim.api.nvim_create_autocmd("BufLeave", {
+--   callback = function()
+--     vim.cmd.hi("TrailingWhitespace ctermbg=Red guibg=Red")
+--     vim.cmd.hi("NonBreakingSpace ctermbg=Red guibg=Red")
+--   end
+-- })
+--
 --Taken from https://www.jackfranklin.co.uk/blog/code-folding-in-vim-neovim/
 
 vim.opt.foldmethod = "expr"
