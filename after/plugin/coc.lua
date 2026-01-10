@@ -61,7 +61,7 @@ vim.api.nvim_create_augroup("CocGroup", {})
 
 
 -- Symbol renaming
-keyset("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true, desc = "Coc rename symbol" })
+keyset("n", "<leader>rs", "<Plug>(coc-rename)", { desc = "Coc rename symbol" })
 
 
 -- Formatting selected code
