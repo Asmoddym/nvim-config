@@ -3,6 +3,8 @@ https://github.com/wbthomason/packer.nvim
 https://github.com/neoclide/coc.nvim
 https://github.com/github/copilot.vim
 https://github.com/farmergreg/vim-lastplace
+https://github.com/jiaoshijie/undotree
+
 
 
 # To check
