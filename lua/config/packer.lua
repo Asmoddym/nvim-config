@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
 
   -- Telescope stuff
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+    'nvim-telescope/telescope.nvim', tag = 'v0.2.1',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
@@ -35,7 +35,7 @@ return require('packer').startup(function(use)
 
   use { 'neoclide/coc.nvim', branch = "release" }
   use {
-    'nvim-treesitter/nvim-treesitter',
+    'nvim-treesitter/nvim-treesitter', tag = "v0.10.0",
     { run = ':TSUpdate' }
   }
 
@@ -92,10 +92,6 @@ return require('packer').startup(function(use)
   }
 
   use { 'nvim-mini/mini.surround' }
-  use({
-    'Wansmer/treesj',
-    requires = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
-  })
 
   use 'nvim-mini/mini.clue'
 
