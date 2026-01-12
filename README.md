@@ -5,6 +5,7 @@ https://github.com/github/copilot.vim
 https://github.com/farmergreg/vim-lastplace
 https://github.com/jiaoshijie/undotree
 
+Treesitter may need to be reverted to master for OSX (go to install path). Linux to be checked on tsx in particular
 
 
 # To check

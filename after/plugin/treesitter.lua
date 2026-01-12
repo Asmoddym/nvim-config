@@ -1,25 +1,5 @@
 -- vim.api.nvim_create_autocmd("User", { pattern = "TSUpdate", callback = function()
---   require('nvim-treesitter.configs').setup {
---     -- A list of parser names, or "all" (the listed parsers MUST always be installed)
---     ensure_installed = { "c", "lua", "cpp", "javascript", "typescript", "ruby" },
---
---     -- Install parsers synchronously (only applied to `ensure_installed`)
---     sync_install = false,
---
---     -- Automatically install missing parsers when entering buffer
---     -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
---     auto_install = true,
---
---     highlight = {
---       enable = true,
---
---     },
---   }
--- end })
---
-
-
-  require('nvim-treesitter').setup {
+  require('nvim-treesitter.configs').setup {
     -- A list of parser names, or "all" (the listed parsers MUST always be installed)
     ensure_installed = { "c", "lua", "cpp", "javascript", "typescript", "ruby" },
 
@@ -32,5 +12,30 @@
 
     highlight = {
       enable = true,
+
     },
   }
+-- end })
+
+
+  --
+  -- require('nvim-treesitter').setup {
+  --   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
+  --   ensure_installed = { "c", "lua", "cpp", "javascript", "typescript", "ruby", "tsx" },
+  --
+  --   -- Install parsers synchronously (only applied to `ensure_installed`)
+  --   sync_install = false,
+  --
+  --   -- Automatically install missing parsers when entering buffer
+  --   -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+  --   auto_install = true,
+  --
+  --   highlight = {
+  --     enable = true,
+  --   },
+  -- }
+
+-- vim.api.nvim_create_autocmd('FileType', {
+--   pattern = { '<filetype>' },
+--   callback = function() vim.treesitter.start() end,
+-- })

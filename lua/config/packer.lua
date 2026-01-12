@@ -35,7 +35,7 @@ return require('packer').startup(function(use)
 
   use { 'neoclide/coc.nvim', branch = "release" }
   use {
-    'nvim-treesitter/nvim-treesitter', tag = "v0.10.0",
+    'nvim-treesitter/nvim-treesitter', branch = "master",
     { run = ':TSUpdate' }
   }
 
