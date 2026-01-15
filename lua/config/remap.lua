@@ -39,3 +39,7 @@ vim.keymap.set("n", "<leader>ns", "<cmd>lua require('neotest').summary.open()<CR
 
 vim.keymap.set("i", "<C-TAB>", "<TAB>")
 
+-- Usage: yank stuff, delete some other, then press p to paste the last yanked text. If you want to paste the deleted text, press P.
+-- https://www.brianstorti.com/vim-registers/
+vim.keymap.set({ "n", "v" }, "p", "\"0p")
+vim.keymap.set({ "n", "v" }, "P", "\"\"p")
